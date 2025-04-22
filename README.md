@@ -1,12 +1,39 @@
-# React + Vite
+Contributing to Habit-Tracker
+Please follow the instructions below to contribute to this project.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+How to Contribute
+1. Fork the Repository
+   Click the “Fork” button in the top-right of this page to create a copy of the repo under your GitHub account.
 
-Currently, two official plugins are available:
+2. Clone Your Fork
+   Clone your fork to your local machine:
+   git clone https://github.com/your-username/your-forked-repo.git
+   cd your-forked-repo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+4. Create a New Branch
+   Always create a new branch for the changes you plan to make:
+   git checkout -b feature/your-feature-name
 
-## Expanding the ESLint configuration
+6. Make Your Changes
+   Implement the feature or fix the bug you’re working on.
+   
+8. Commit Your Changes
+   Stage and commit your changes:
+   git add .
+   git commit -m "Add: [short description of your changes]"
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+10. Push to Your Fork
+    git push origin feature/your-feature-name
+
+11. Create a Pull Request (PR)
+    Go to your fork on GitHub and click "Compare & Pull Request".
+    Make sure to add a clear title and description of the changes you made.
+
+Code Guidelines
+1. Keep your code clean and readable.
+
+2. Follow existing naming conventions.
+
+3. Test your changes before committing.
+
+4. Avoid committing node_modules, .env, or other local files. Add them to .gitignore.
