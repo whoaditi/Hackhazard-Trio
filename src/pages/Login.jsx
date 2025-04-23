@@ -1,6 +1,5 @@
 import { useState } from 'react';
-// import { signInWithEmailAndPassword } from 'firebase/auth';
-// import { auth } from '../services/firebase';
+import { logIn } from '../services/authService';
 import { useNavigate } from 'react-router-dom';
 import '../styles/app.css';
 
@@ -15,7 +14,7 @@ function Login() {
     const password = e.target.password.value;
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      await logIn( email, password);
       navigate('/dashboard');
     } catch (err) {
       setError('Invalid email or password.');

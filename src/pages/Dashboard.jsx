@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-// import { db } from '../services/firebase';
-// import { collection, getDocs, query, where, addDoc } from 'firebase/firestore';
+import { db } from '../services/firebase';
+import { collection, getDocs, query, where, addDoc } from 'firebase/firestore';
 import HabitCard from '../components/HabitCard';
 import Header from '../components/Header';
 

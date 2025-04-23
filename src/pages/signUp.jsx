@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { signUp } from '../services/authService';
+import { signUp,googleProvider,signupwithGoogle } from '../services/authService';
 import FormInput from '../components/FormInput';
 import '../styles/app.css';
 
@@ -29,6 +29,8 @@ function Signup() {
         {error && <p style={{ color: 'red' }}>{error}</p>}
         <button type="submit">Create Account</button>
       </form>
+      <h3>OR</h3>
+      <button onClick={signupwithGoogle}>signup With Google</button>
       <p>Already have an account? <a href="/">Login</a></p>
     </div>
   );
