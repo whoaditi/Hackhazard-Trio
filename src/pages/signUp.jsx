@@ -30,7 +30,7 @@ function Signup() {
         <button type="submit">Create Account</button>
       </form>
       <h3>OR</h3>
-      <button onClick={signupwithGoogle}>signup With Google</button>
+      <button className= "google-button" onClick={signupwithGoogle}>signup With Google</button>
       <p>Already have an account? <a href="/">Login</a></p>
     </div>
   );

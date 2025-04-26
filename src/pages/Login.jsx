@@ -23,6 +23,7 @@ function Login() {
 
   return (
     <div className="container">
+
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
         <input type="email" name="email" placeholder="Email" required /><br />

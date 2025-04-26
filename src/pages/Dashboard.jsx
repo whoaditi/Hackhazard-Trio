@@ -88,32 +88,41 @@ function Dashboard() {
   return (
     <div>
       <Header title="Welcome to Your Ultimate Habit Builder Destination" />
-      <p class="quote">“Small steps every day lead to big results.”</p><br></br><br></br>
+      
+      <p className="quote">“Small steps every day lead to big results.”</p>
+  
       <form onSubmit={handleAddHabit}>
-        <div class="add-habit-container">
-        <input
-          type="text"
-          value={habitInput}
-          onChange={(e) => setHabitInput(e.target.value)}
-          placeholder="Add a new habit"
-        />
-        <button type="submit">Add Habit</button></div>
+        <div className="add-habit-container">
+          <input
+            type="text"
+            value={habitInput}
+            onChange={(e) => setHabitInput(e.target.value)}
+            placeholder="Add a new habit"
+          />
+          <button type="submit" className="add-habit-button">Add Habit</button>
+        </div>
       </form>
-
-      <div>
+  
+      <div className="habit-cards-container">
         {habits.map(habit => (
-          <HabitCard
-            key={habit.id}
-            habit={habit}
-            onMarkAsDone={onMarkAsDone}
-            onDelete={onDelete}
-          />))}
+          <div className="card" key={habit.id}>
+            <h4>{habit.name}</h4>
+            <div className="card-footer">
+              <span className="streak">Streak: {habit.streak}</span>
+              <div>
+                <button className="done" onClick={() => onMarkAsDone(habit.id)}>Done for Today</button>
+                <button className="delete" onClick={() => onDelete(habit.id)}>Delete</button>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
-}
-
-export default Dashboard;
+  }
+  
+  export default Dashboard;
+  
 
 
 

@@ -5,15 +5,16 @@ const HabitCard = ({ habit, onMarkAsDone }) => {
     <div className="card">
       <h4>{habit.name}</h4>
       <p>Streak: {habit.streak}</p>
-      <button
+      <div className="card-buttons">
+        <button 
         disabled={habit.completedToday}
-        onClick={() => onMarkAsDone(habit.id, habit.streak) } 
-      >
+        onClick={() => onMarkAsDone(habit.id, habit.streak) } >
         {habit.completedToday ? 'Done for Today' : 'Mark as Done'}
-      </button>
-      <button onClick={() => onDelete(habit.id)} style={{margin:'5px'}}>
-        Delete
-      </button>
+        </button>
+        <button onClick={() => onDelete(habit.id)} style={{margin:'5px'}}>
+          Delete
+          </button>
+      </div>
     </div>
   );
 };
