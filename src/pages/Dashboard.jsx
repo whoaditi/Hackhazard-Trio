@@ -69,7 +69,7 @@ function Dashboard() {
   
       const today = new Date().toISOString().split('T')[0];
   
-      if (habit.lastCompletedDate === today) {
+      if (habit.completedToday) {
         alert("You've already marked this habit as done today! ✅");
         return;
       }
