@@ -20,6 +20,15 @@ function Signup() {
     }
   };
 
+  const handleGoogleSignup = async () => {
+    try {
+      await signupwithGoogle();
+      navigate('/dashboard'); // ✅ go to dashboard after google signup
+    } catch (err) {
+      setError('Error: ' + err.message);
+    }
+  };
+
   return (
     <div className="container">
       <h2>Sign Up</h2>
@@ -30,7 +39,7 @@ function Signup() {
         <button type="submit">Create Account</button>
       </form>
       <h3>OR</h3>
-      <button className= "google-button" onClick={signupwithGoogle}>Signup With Google</button>
+      <button className= "google-button" onClick={handleGoogleSignup}>Signup With Google</button>
       <p>Already have an account? <a href="/">Login</a></p>
     </div>
   );

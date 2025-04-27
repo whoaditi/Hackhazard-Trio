@@ -35,6 +35,14 @@ export const logOut = async () => {
     throw new Error(error.message);
   }
 };
-export const signupwithGoogle = () => {
-  signInWithPopup(auth,googleProvider);
-}
+// ✅ Updated signupwithGoogle
+export const signupwithGoogle = async () => {
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+    console.log('Google signup successful', result.user);
+    return result.user; // ✅ return user after success
+  } catch (error) {
+    console.error('Google signup error:', error.message);
+    throw new Error(error.message);
+  }
+};
