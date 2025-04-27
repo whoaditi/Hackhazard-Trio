@@ -7,10 +7,11 @@ How to Contribute
 
 2. Clone Your Fork
    Clone your fork to your local machine:
-   git clone https://github.com/your-username/your-forked-repo.git
+   git clone https://github.com/your-username/your-forked-repo.gitgit add .
+   
    cd your-forked-repo
 
-4. Create a New Branch
+4. create pull request pull request pull request a New Branch
    Always create a new branch for the changes you plan to make:
    git checkout -b feature/your-feature-name
 
